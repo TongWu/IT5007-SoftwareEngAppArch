@@ -1,0 +1,126 @@
+/* Basic CSS styling has been provided to you.
+ * For Q6, try to enhance this CSS.
+ */
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: cornsilk;
+    margin: 0;
+    height:100%;
+    /* Let navigation bar does not obscure the content */
+    padding-top: 50px;
+}
+h1 {
+    color: brown;
+}
+
+#add, #finish, #display {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/*
+Keep the navigation bar always on the display
+ */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+
+nav ul li {
+    float: left;
+    list-style-type: none;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: green;
+}
+
+#container{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+#home {
+    height:100%;
+}
+
+#add {
+    height:100%;
+}
+
+#finish {
+    height:100%;
+}
+
+#display {
+    height:100%;
+}
+
+table {
+    padding: 0;
+    border: 0;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    margin: 20px 1% 1%;
+}
+
+thead {
+    color: white;
+    background-color:purple;
+}
+
+tbody tr:nth-child(odd){
+    background-color: #2f2f2f;
+    overflow: hidden;
+    color: purple;
+    text-align: center;
+    margin: 10px;
+}
+
+tbody tr:nth-child(even){
+    background-color: white;
+    overflow: hidden;
+    color: purple;
+    text-align: center;
+    margin: 10px;
+}
+
+thead th {
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+td {
+    color: purple;
+    background-color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}

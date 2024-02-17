@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>The List that never ends</title>
+    <link rel="stylesheet" href="todo.css">
+    <script src="todo.js" defer></script>
+</head>
+<body onload="bootstrap()">
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#add">Add</a></li>
+            <li><a href="#finish">Finish</a></li>
+            <li><a href="#display">Display</a></li>
+        </ul>
+    </nav>
+    <div id="container">
+        <div id="home">
+            <!-- Code for Q1 starts-->
+            <h1>Welcome to The List that never ends.</h1>
+            <p>Navigate through the panel to add, finish, or display tasks.</p>
+            <!-- Code for Q1 ends-->
+        </div>
+        <div id="add">
+            <h2>Add a New Task to the List</h2>
+            <form>
+            <!-- Code for Q2 starts. Accept new task from user. 
+                 Finally, when the user clicks the submit button,
+                 use the onclick event to call addfunction() in
+                 todo.js file. Note that you can use something
+                 similar to <body onload="bootstrap()"> instead of 
+                 using an addEventListener. 
+            -->
+                <label for="taskDescription">Task Description: </label>
+                <input type="text" id="taskDescription" name="taskDescription" required><br>
+                <label for="taskPriority">Task Priority: </label>
+                <select id="taskPriority" name="taskPriority">
+                    <option value="Inbox">Inbox</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                    <option value="Urgent">Urgent</option>
+                </select><br>
+                <label for="taskDeadline">Task Deadline: </label>
+                <input type="date" id="taskDeadline" name="taskDeadline" required><br>
+                <button type="button" onclick="addfunction()">Submit</button>
+            <!-- Code for Q2 ends -->
+            </form>
+        </div>
+        <div id="finish">
+            <h2>Select a Task to Finish</h2>
+            <form>
+            <!-- Code for Q3 starts. Finish a task given the ID/Sno. 
+                 When the user clicks the submit button, use the onclick
+                 event to call finishfunction() in todo.js file. 
+            -->
+                <label for="taskID">Task ID: </label>
+                <input type="text" id="taskID" name="taskID" required><br>
+                <button type="button" onclick="finishfunction()">Submit</button>
+            <!-- Code for Q3 ends -->
+            </form>
+        </div>
+        <div id="display">
+            <!-- HTML code for Q4 has been written already.
+                 You will have to write the corresponding JS code
+                 to populate the tables. 
+                 An important design choice involves when to call the 
+                 JS function that populates the tables.
+            -->
+            <!-- Display outstanding list of Tasks -->
+            <table id="displayoutstanding">
+                <thead>
+                    <tr>
+                        <th>Sno</th>
+                        <th>Description</th>
+                        <th>Priority</th>
+                        <th>Deadline</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <!-- Display Completed Tasks -->
+            <table id="displaycompleted">
+                <thead>
+                    <tr>
+                        <th>Sno</th>
+                        <th>Description</th>
+                        <th>Priority</th>
+                        <th>Deadline</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
